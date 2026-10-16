@@ -55,7 +55,7 @@ namespace Hra2048
             } while (cells[x, y].Val > 0);
 
             int newVal = generator.Next(100) < 71 ? 2 : 4;
-            cells[x, y].Val = newVal;
+            cells[x, y].Val = newVal; 
         }
     }
 }
