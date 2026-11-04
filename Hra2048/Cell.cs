@@ -23,6 +23,8 @@ namespace Hra2048
             }
         }
 
+        public bool MergedThisRound = false;
+
         static Dictionary<int, Color> colors =
             new Dictionary<int, Color>() {
                 { 0, Color.White },

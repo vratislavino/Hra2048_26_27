@@ -60,7 +60,44 @@ namespace Hra2048
     
         public void DoMovement(int x, int y)
         {
+            //i, j -> řádek, sloupec
+            List<int> cisla = new List<int>(size);
 
+            // horizontal
+            // <- / A
+            for (int i = 0; i < size; i++) // řádek po řádku
+            {
+                cisla.Clear();
+                for(int j = 0; j < size; j++) // buňky v řádku
+                {
+                    if (cells[i, j].Val != 0)
+                        cisla.Add(cells[i, j].Val);
+                }
+                MergeValues(cisla);
+                for (int j = 0; j < size; j++)
+                {
+                    if (j < cisla.Count)
+                        cells[i, j].Val = cisla[j];
+                    else
+                        cells[i, j].Val = 0;
+                }
+            }
+
+
+            FillRandomCell();
+        }
+
+        private void MergeValues(List<int> cisla)
+        {
+            if (cisla.Count <= 1) return;
+            for(int i = 0; i < cisla.Count - 1; i++)
+            {
+                if (cisla[i] == cisla[i + 1])
+                {
+                    cisla[i] *= 2;
+                    cisla.RemoveAt(i + 1);
+                }
+            }
         }
     }
 }
