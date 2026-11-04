@@ -34,18 +34,20 @@
             // board1
             // 
             board1.BackColor = Color.White;
-            board1.Location = new Point(12, 12);
+            board1.Location = new Point(15, 17);
+            board1.Margin = new Padding(6, 8, 6, 8);
             board1.Name = "board1";
-            board1.Size = new Size(320, 320);
+            board1.Size = new Size(482, 482);
             board1.TabIndex = 0;
             board1.KeyDown += board1_KeyDown;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(345, 345);
+            ClientSize = new Size(513, 517);
             Controls.Add(board1);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);

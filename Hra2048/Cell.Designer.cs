@@ -33,23 +33,26 @@
             // 
             // label1
             // 
-            label1.Font = new Font("Palatino Linotype", 18F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            label1.Location = new Point(-1, 0);
+            label1.Dock = DockStyle.Fill;
+            label1.Font = new Font("Palatino Linotype", 20F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label1.Location = new Point(0, 0);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(80, 78);
+            label1.Size = new Size(120, 120);
             label1.TabIndex = 0;
             label1.Text = "2048";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Cell
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BorderStyle = BorderStyle.FixedSingle;
             Controls.Add(label1);
             Enabled = false;
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Cell";
-            Size = new Size(80, 80);
+            Size = new Size(120, 120);
             ResumeLayout(false);
         }
 
