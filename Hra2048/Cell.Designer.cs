@@ -47,6 +47,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BorderStyle = BorderStyle.FixedSingle;
             Controls.Add(label1);
+            Enabled = false;
             Name = "Cell";
             Size = new Size(80, 80);
             ResumeLayout(false);

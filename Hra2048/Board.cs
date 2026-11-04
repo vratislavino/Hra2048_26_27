@@ -57,5 +57,10 @@ namespace Hra2048
             int newVal = generator.Next(100) < 71 ? 2 : 4;
             cells[x, y].Val = newVal; 
         }
+    
+        public void DoMovement(int x, int y)
+        {
+
+        }
     }
 }

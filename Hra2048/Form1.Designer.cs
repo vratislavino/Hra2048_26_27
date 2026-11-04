@@ -38,6 +38,7 @@
             board1.Name = "board1";
             board1.Size = new Size(320, 320);
             board1.TabIndex = 0;
+            board1.KeyDown += board1_KeyDown;
             // 
             // Form1
             // 
